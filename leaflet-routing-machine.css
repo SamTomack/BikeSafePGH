@@ -1,13 +1,23 @@
+:root{
+    /* COLOR PALLATE */
+    --cream: #f6f5e8;
+    --sand: #f8e4a2;
+    --darkBlue: #53799d;
+    --textBlue: #405c78;
+    --powderBlue: #d2e9ea;
+    --slate: #91989c;
+}
+
 .leaflet-routing-container, .leaflet-routing-error {
     width: 320px;
-    background-color: white;
+    background-color: var(--cream);
     padding-top: 4px;
     transition: all 0.2s ease;
     box-sizing: border-box;
 }
 
 .leaflet-control-container .leaflet-routing-container-hide {
-    width: 32px;
+    width: 200px;
     height: 32px;
 }
 
@@ -60,21 +70,21 @@
 }
 
 .leaflet-routing-alt::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
 }
 
 .leaflet-routing-alt::-webkit-scrollbar-track {
     border-radius: 2px;
-    background-color: #eee;
+    background-color: var(--cream);
 }
 
 .leaflet-routing-alt::-webkit-scrollbar-thumb {
     border-radius: 2px;
-    background-color: #888;
+    background-color: var(--slate);
 }
 
 .leaflet-routing-icon {
-    background-image: url('leaflet.routing.icons.png');
+    /* background-image: url('leaflet.routing.icons.png'); */
     -webkit-background-size: 240px 20px;
     background-size: 240px 20px;
     background-repeat: no-repeat;
@@ -140,7 +150,7 @@
 }
 
 .leaflet-routing-geocoder-result {
-    font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font: 12px/1.5 Helvetica;
     position: absolute;
     max-height: 0;
     overflow: hidden;
@@ -222,17 +232,20 @@
 }
 
 .leaflet-routing-container-hide .leaflet-routing-collapse-btn {
-    position: relative;
-    left: 4px;
-    top: 4px;
+    margin: 0px;
+    padding: 0px;
+    top: -8px;
+    left: 12px;
     display: block;
-    width: 26px;
-    height: 23px;
-    background-image: url('routing-icon.png');
+    width: 200px;
+    height: 32px;
+    /* background-image: url('routing-icon.png'); */
 }
 
 .leaflet-routing-container-hide .leaflet-routing-collapse-btn:after {
-    content: none;
+    color: var(--textBlue);
+    font-size: 14px;
+    content: 'Click To Show Directions';
 }
 
 .leaflet-top .leaflet-routing-container.leaflet-routing-container-hide {
