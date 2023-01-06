@@ -21,8 +21,8 @@ body{
     width: 18rem;
     max-height: 100vh;
     z-index: 2;
-    overflow: hidden;
     background-color: var(--cream);
+    overflow: hidden;
 }
 
 #mapContainer{
@@ -31,30 +31,12 @@ body{
     height: 100vh;
 }
 
-#searchButton{
-    font-weight: bold;
-    color: var(--textBlue);
-    width: 100%;
-    border: none;
-    height: 7.5%;
-    display: block;
-    background: linear-gradient(to right, var(--sand) 50%, var(--cream) 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all .5s ease-out;
-}
-
-#searchButton:hover{
-    background-position: left bottom;
-
-}
-
 #goButton{
     font-weight: bold;
     color: var(--textBlue);
     width: 100%;
     border: none;
-    height: 7.5%;
+    height: 10%;
     display: block;
     background: linear-gradient(to right, var(--sand) 50%, var(--cream) 50%);
     background-size: 200% 100%;
@@ -66,30 +48,21 @@ body{
     background-position: left bottom;
 }
 
-#resultList{
-    padding: 5px;
-    list-style: none; 
-    overflow: auto;
+#resultContainer{
+    display: flex;
+    flex-direction: column;
+    height: 75%;
     border-top-style: solid;
     border-width: 2px;
     border-color: var(--textBlue);
+    overflow: auto;
 }
 
-/* ::-webkit-scrollbar{
-    width: 5px;
+#resultList{
+    margin: 0px;
+    padding: 5px;
+    list-style: none; 
 }
-
-::-webkit-scrollbar-track{
-    background-color: var(--sand);
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: var(--powderBlue);
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background-color: var(--darkBlue);
-} */
 
 #logo{
     display: flex;
@@ -99,6 +72,11 @@ body{
     font-weight: bold;
     letter-spacing: .3ch;
     background-color: var(--sand);
+    transition: 500ms ease;
+}
+
+#logo:hover{
+    filter: brightness(110%);
 }
 
 a{
@@ -108,15 +86,27 @@ a{
 
 li{
     padding: 5px;
-    /* border-style: solid;
-    /* border-color: var(--powderBlue); */
     border-width: 1px;
     border-radius: 5px; 
 }
 
 li:hover{
     background-color: var(--sand);
-    transition: 200ms ease;
+    transition: 500ms ease;
+}
+
+#resultContainer::-webkit-scrollbar {
+    width: 4px;
+}
+
+#resultContainer::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: var(--cream);
+}
+
+#resultContainer::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: var(--slate);
 }
 
 /* Searchbar and Animations */
